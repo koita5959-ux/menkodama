@@ -124,8 +124,8 @@ img {
 }
 
 .fv-logo {
-  width: 35%;
-  max-width: 450px;
+  width: 22%;
+  max-width: 300px;
   height: auto;
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
 }
