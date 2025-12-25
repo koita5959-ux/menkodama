@@ -17,13 +17,13 @@ if (path.includes('/en/')) {
   basePath = '../';
 }
 
-// 言語コード表示
-const langCodes = {
-  jp: 'JP',
-  en: 'EN',
-  ko: 'KO',
-  cn: 'CN',
-  tw: 'TW'
+// 言語フル表記
+const langNames = {
+  jp: '日本語',
+  en: 'English',
+  ko: '한국어',
+  cn: '简体中文',
+  tw: '繁體中文'
 };
 
 // ナビメニューテキスト
@@ -56,7 +56,7 @@ const headerHTML = `
       <li><a href="#menu">${navTexts[currentLang].menu}</a></li>
       <li><a href="#access">${navTexts[currentLang].access}</a></li>
       <li class="lang-dropdown">
-        <button class="lang-btn">🌐 ${langCodes[currentLang]} ▼</button>
+        <button class="lang-btn">🌐 ${langNames[currentLang]} ▼</button>
         <ul class="lang-menu">
           <li><a href="${langPaths.jp}index.html" class="${currentLang === 'jp' ? 'active' : ''}">日本語</a></li>
           <li><a href="${langPaths.en}index.html" class="${currentLang === 'en' ? 'active' : ''}">English</a></li>
