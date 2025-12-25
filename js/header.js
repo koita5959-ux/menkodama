@@ -72,3 +72,19 @@ const headerHTML = `
 
 // ヘッダーを挿入
 document.getElementById('header-container').innerHTML = headerHTML;
+
+// ドロップダウンのクリックイベント
+const langBtn = document.querySelector('.lang-btn');
+const langMenu = document.querySelector('.lang-menu');
+
+langBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  langMenu.classList.toggle('show');
+});
+
+// メニュー外クリックで閉じる
+document.addEventListener('click', function(e) {
+  if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) {
+    langMenu.classList.remove('show');
+  }
+});

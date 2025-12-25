@@ -96,11 +96,11 @@ img {
   right: 0;
   top: 100%;
   background: #000;
-  min-width: 120px;
+  min-width: 160px;
   border-radius: 3px;
-  margin-top: 5px;
   padding: 5px 0;
   list-style: none;
+  z-index: 1000;
 }
 
 .lang-menu li {
@@ -108,18 +108,18 @@ img {
   padding: 0;
 }
 
-.lang-dropdown:hover .lang-menu {
+.lang-menu.show {
   display: block;
 }
 
 .lang-btn {
-  background: none;
+  background: transparent;
   border: 1px solid #fff;
-  padding: 5px 15px;
-  border-radius: 3px;
   color: #fff;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 14px;
+  border-radius: 3px;
+  font-size: 16px;
 }
 
 .lang-menu a {
