@@ -191,8 +191,16 @@ img {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   letter-spacing: 0.1em;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 60px;
+  letter-spacing: 0.05em;
 }
 
 .section-lead {
@@ -201,14 +209,297 @@ img {
   color: #666;
 }
 
-/* About */
+/* About / こだわり */
 .about {
   background: #f9f9f9;
+}
+
+/* こだわりグリッド */
+.kodawari-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.kodawari-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kodawari-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 白背景カード */
+.kodawari-card.light {
+  background: #fff;
+}
+
+.kodawari-card.light .kodawari-text h3 {
+  color: #1a1a1a;
+}
+
+.kodawari-card.light .kodawari-text p {
+  color: #666;
+}
+
+/* 深い茶色背景カード */
+.kodawari-card.dark {
+  background: #2a1a0a;
+}
+
+.kodawari-card.dark .kodawari-text h3 {
+  color: #fff;
+}
+
+.kodawari-card.dark .kodawari-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.kodawari-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.kodawari-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.kodawari-card:hover .kodawari-image img {
+  transform: scale(1.05);
+}
+
+.kodawari-text {
+  padding: 25px;
+}
+
+.kodawari-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.kodawari-text p {
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 /* Menu */
 .menu {
   background: #fff;
+}
+
+/* Menu Section */
+.menu-section {
+  background: #2a1a0a;
+}
+
+.section-title.light {
+  color: #fff;
+}
+
+.section-subtitle.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.menu-item:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+.menu-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-info h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.menu-price {
+  color: #d4a574;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Reviews Section */
+.reviews {
+  background: #fff;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.review-card {
+  display: flex;
+  gap: 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.review-image {
+  flex: 0 0 300px;
+  min-height: 200px;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-stars {
+  color: #f5a623;
+  font-size: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-size: 13px;
+  color: #888;
+  text-align: right;
+}
+
+/* Media Section */
+.media-section {
+  background: #f5f0eb;
+}
+
+.media-content {
+  display: flex;
+  gap: 50px;
+  align-items: stretch;
+}
+
+.media-image {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.media-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.media-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.media-badge {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.media-badge.tv {
+  background: #e74c3c;
+}
+
+.media-badge.magazine {
+  background: #3498db;
+}
+
+.media-badge.web {
+  background: #27ae60;
+}
+
+.media-badge.award {
+  background: #f39c12;
+}
+
+.media-detail h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.media-detail p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Access */
@@ -261,17 +552,6 @@ img {
   line-height: 1.8;
 }
 
-@media (max-width: 768px) {
-  .access-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .access-map {
-    min-height: 300px;
-  }
-}
-
 /* Footer */
 .footer {
   background: #1a1a1a;
@@ -310,6 +590,23 @@ img {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .kodawari-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .media-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     gap: 15px;
@@ -325,6 +622,72 @@ img {
 
   .section-title {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .kodawari-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .kodawari-text {
+    padding: 20px;
+  }
+
+  .kodawari-text h3 {
+    font-size: 16px;
+  }
+
+  .kodawari-text p {
+    font-size: 13px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .review-card {
+    flex-direction: column;
+  }
+
+  .review-image {
+    flex: none;
+    height: 200px;
+  }
+
+  .review-content {
+    padding: 20px;
+  }
+
+  .media-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .media-item {
+    padding: 15px;
+  }
+
+  .media-detail h4 {
+    font-size: 14px;
+  }
+
+  .media-detail p {
+    font-size: 13px;
+  }
+
+  .access-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .access-map {
+    min-height: 300px;
   }
 }
