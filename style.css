@@ -90,6 +90,7 @@ img {
 .fv {
   position: relative;
   width: 100%;
+  margin-top: 70px;
 }
 
 .fv-video-wrapper {
